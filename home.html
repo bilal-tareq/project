@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href=css/style.css>
 </head>
 <body>
-    <input id="todoList"type="text">
-    <ol onclick="submit()" id="randoms">
-        <li id="removed" class="listBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, beatae!</li>
-        <li class="listBox">Iusto nesciunt nostrum, deserunt ex corrupti nisi atque tempore reprehenderit.</li>
-        <li class="listBox">Voluptatum pariatur cupiditate qui omnis ea expedita adipisci, magnam beatae.</li>
-        <li class="listBox">Explicabo optio maiores magnam recusandae alias, ratione modi totam reprehenderit.</li>
-        <li class="listBox">Inventore sequi debitis, impedit et enim possimus modi repellat minus?</li>
-    </ol>
-    <button  onclick="clicked()" id="changeMe">Click me </button>
-    <script src="script/order.js"></script>
-    <script>
-  document.getElementById("randoms").addEventListener("click", function(e) {
-    if (e.target.tagName === "LI") {
-      e.target.classList.toggle("done");
-    }
-  });
-</script>
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">My To Do List</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+  <li>Hit the gym</li>
+  <li id="removed" class="listBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, beatae!</li>
+  <li class="listBox">Iusto nesciunt nostrum, deserunt ex corrupti nisi atque tempore reprehenderit.</li>
+  <li class="listBox">Voluptatum pariatur cupiditate qui omnis ea expedita adipisci, magnam beatae.</li>
+  <li class="listBox">Explicabo optio maiores magnam recusandae alias, ratione modi totam reprehenderit.</li>
+  <li class="listBox">Inventore sequi debitis, impedit et enim possimus modi repellat minus?</li>
+</ul>
+
+
+<script src="script/order.js"></script>
 </body>
 </html>
